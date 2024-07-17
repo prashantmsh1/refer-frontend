@@ -85,7 +85,7 @@ const Table = () => {
             </div>
             <div className="mt-8 text-center ">
                 <button
-                    onClick={setReferopen(!referopen)}
+                    onClick={() => setReferopen(!referopen)}
                     className="px-12 py-4 text-2xl text-white bg-blue-600 rounded-md">
                     Refer Now
                 </button>
