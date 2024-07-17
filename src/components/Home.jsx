@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Table from "./Table";
 import Form from "./Form";
+import Faq from "./Faq";
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Hero />
 
             <Table />
+            <Faq />
         </div>
     );
 };
