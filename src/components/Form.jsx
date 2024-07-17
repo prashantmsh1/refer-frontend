@@ -15,8 +15,8 @@ const Form = () => {
         console.log(formData);
     };
     const handleSubmit = async (e) => {
-        e.preventDefault();
         try {
+            e.preventDefault();
             if (
                 !formData.referrerName ||
                 !formData.referrerEmail ||
@@ -27,7 +27,7 @@ const Form = () => {
                 console.log(formData);
             }
             console.log(formData);
-            const response = await fetch("http://localhost:3000/api/referral", {
+            const response = await fetch("/api/referral", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -40,7 +40,7 @@ const Form = () => {
             }
             console.log(data);
         } catch (error) {
-            setError("Something went wrong");
+            setError("Something went wrong", error);
         }
     };
     return (
@@ -80,7 +80,7 @@ const Form = () => {
                     <input
                         onChange={handleChange}
                         type="email"
-                        id="email"
+                        id="referrerEmail"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                         placeholder="email..."
                         required
@@ -93,7 +93,7 @@ const Form = () => {
                     <input
                         onChange={handleChange}
                         type="text"
-                        id="referrerName "
+                        id="refereeName"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                         required
                         placeholder="name..."
@@ -106,7 +106,7 @@ const Form = () => {
                     <input
                         onChange={handleChange}
                         type="text"
-                        id="referreeEmail"
+                        id="refereeEmail"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                         required
                         placeholder="name..."
