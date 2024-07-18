@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import Table from "./Table";
 import Form from "./Form";
 import Faq from "./Faq";
+import Footer from "./Footer";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
 
             <Table />
             <Faq />
+            <Footer />
         </div>
     );
 };
